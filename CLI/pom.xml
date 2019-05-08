@@ -5,13 +5,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>mx.rafex.cursos.fundamentos</groupId>
-		<artifactId>Base</artifactId>
-		<version>0.1.0-SNAPSHOT</version>
+        <groupId>mx.rafex.noobz</groupId>
+        <artifactId>Noobz</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>mx.rafex.cursos.fundamentos.interfaz</groupId>
-	<artifactId>Interfaz</artifactId>
+	<groupId>mx.rafex.noobz.cli</groupId>
+	<artifactId>CLI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -24,7 +24,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>mx.rafex.cursos.fundamentos.negocio</groupId>
+			<groupId>mx.rafex.noobz.negocio</groupId>
 			<artifactId>Negocio</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
