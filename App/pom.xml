@@ -11,7 +11,7 @@
         <version>1.0.0-SNAPSHOT</version>
 	</parent>
     
-	<groupId>mx.rafex.cursos.fundamentos.app</groupId>
+	<groupId>mx.rafex.noobz.app</groupId>
 	<artifactId>App</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
