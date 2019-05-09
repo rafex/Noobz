@@ -29,7 +29,7 @@
         <module>Negocio</module>
         
         
-        <module>Interfaz</module>
+        <module>CLI</module>
         <module>App</module>
   </modules>
 </project>

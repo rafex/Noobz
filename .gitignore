@@ -34,6 +34,9 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+.wtpmodules
+.classpath
+.project
 
 # External tool builders
 .externalToolBuilders/

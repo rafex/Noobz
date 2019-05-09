@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
-    <groupId>mx.rafex.cursos.fundamentos</groupId>
-    <artifactId>Base</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+      <groupId>mx.rafex.noobz</groupId>
+      <artifactId>Noobz</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
   </parent>
   
-  <groupId>mx.rafex.cursos.fundamentos.excepciones</groupId>
+  <groupId>mx.rafex.noobz.excepciones</groupId>
   <artifactId>Excepciones</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
