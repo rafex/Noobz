@@ -36,6 +36,7 @@ local.properties
 .recommenders
 .wtpmodules
 .classpath
+.project
 
 # External tool builders
 .externalToolBuilders/
