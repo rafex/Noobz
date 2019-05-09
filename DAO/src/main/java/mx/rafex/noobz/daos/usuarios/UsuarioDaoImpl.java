@@ -27,9 +27,9 @@ public class UsuarioDaoImpl implements UsuarioDao {
     @Override
     public UsuarioDto crear(final UsuarioDto usuario) {
         UsuarioDto resultado = null;
-        final String consulta = this.INSERT_USUARIO.replace("{alias}", usuario.getAlias())
+        final String consulta = INSERT_USUARIO.replace("{alias}", usuario.getAlias())
                 .replace("{correoElectronico}", usuario.getCorreoElectronico())
-                .replace("{contrasenya}", this.hashMe(usuario.getContrasenya()));
+                .replace("{contrasenya}", hashMe(usuario.getContrasenya()));
         Statement sentencia = null;
         try {
             sentencia = Sqlite.conexion.createStatement();
@@ -42,7 +42,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
                 ResultSet rs1 = pst1.executeQuery();
                 final Integer maxId = rs1.getInt("LAST");
                 System.out.println("id:" + maxId);
-                pst1 = Sqlite.conexion.prepareStatement(this.SELECT_USUARIO);
+                pst1 = Sqlite.conexion.prepareStatement(SELECT_USUARIO);
                 pst1.setInt(1, maxId);
                 rs1 = pst1.executeQuery();
                 if (rs1 != null) {
@@ -64,9 +64,8 @@ public class UsuarioDaoImpl implements UsuarioDao {
             System.err.println(e.getMessage());
         } finally {
             try {
-                if (sentencia != null) {
+                if (sentencia != null)
                     sentencia.close();
-                }
             } catch (final SQLException ex) {
                 System.err.println("Error al cerrar la sentencia");
                 System.err.println(ex.getMessage());
@@ -78,7 +77,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
     private UsuarioDto ejecutarConsulta(final UsuarioDto usuario) {
         final UsuarioDto resultado = null;
 
-        final String consulta = this.SELECT_USUARIO.replace("{id}", String.valueOf(usuario.getId()));
+        final String consulta = SELECT_USUARIO.replace("{id}", String.valueOf(usuario.getId()));
 
         try (Statement sentencia = Sqlite.conexion.createStatement()) {
 
@@ -88,16 +87,14 @@ public class UsuarioDaoImpl implements UsuarioDao {
             if (resultSet != null) {
                 System.out.println("Se ejecuto la consulta correctamente");
 
-                while (resultSet.next()) {
+                while (resultSet.next())
                     System.out.println(resultSet.getString("correoElectronico"));
-                }
 
                 sentencia.close();
                 resultSet.close();
 
-            } else {
+            } else
                 System.err.println("Fallo la consulta");
-            }
 
         } catch (final SQLException e) {
             System.err.println("Hubo un error al ejecutar la consulta: ");
