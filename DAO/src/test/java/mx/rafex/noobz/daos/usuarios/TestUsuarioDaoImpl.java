@@ -16,9 +16,9 @@ class TestUsuarioDaoImpl {
     void pruebaInsercionUsuario() {
 
         final UsuarioDto usuario = new UsuarioDto();
-        usuario.setAlias("Israel");
-        usuario.setCorreoElectronico("israel.dev@gmail.com");
-        usuario.setContrasenya("12345");
+        usuario.setAlias("Abel");
+        usuario.setCorreoElectronico("abel@gmail.com");
+        usuario.setContrasenya("43443");
         final UsuarioDto resultado = this.usuarioDao.crear(usuario);
 
         assertNotNull(resultado, "fallo");
@@ -26,6 +26,13 @@ class TestUsuarioDaoImpl {
 
         System.out.println("Id: " + resultado.getId());
         System.out.println("Alias: " + resultado.getAlias());
+    }
+
+    @DisplayName("Prueba de traer todos los usuarios de la tabla")
+    @Test
+    void pruebaDeTraerTodosLosUsuariosDeLaTabla() {
+
+        this.usuarioDao.todos();
     }
 
 }

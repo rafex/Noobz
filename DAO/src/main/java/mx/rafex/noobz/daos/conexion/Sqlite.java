@@ -18,7 +18,7 @@ public class Sqlite {
     private static void conectarBaseDeDatos() {
         try {
             Class.forName("org.sqlite.JDBC");
-            final String url = "jdbc:sqlite:/Volumes/@rafex_hdd/job/clientes/cursos/Fundamentos-de-programacion-con-Java/rafex-system.db";
+            final String url = "jdbc:sqlite:/Users/rafex/job/personal/Noobz/rafex-system.db";
             conexion = DriverManager.getConnection(url);
 
             System.out.println("Se ha conectado a la base correctamente");
@@ -30,8 +30,9 @@ public class Sqlite {
 
     public static void cerrarConexion() {
         try {
-            if (conexion != null)
+            if (conexion != null) {
                 conexion.close();
+            }
         } catch (final SQLException ex) {
             System.err.println("Error al cerrar la conexion");
             System.err.println(ex.getMessage());
